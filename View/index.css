@@ -1,0 +1,237 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+body {
+	font-family: sans-serif;
+	width: 1092.5px;
+	margin: auto;
+	background-color: lightgray;
+}
+.center{
+	display: block;
+	width: 1092.5px;
+	margin: auto;
+	background-color: #333;
+}
+#content {
+	height: 1000px;
+	background-color: white;
+	box-shadow: 0 3px 3px gray;
+}
+#head {
+	margin-top: 10px;
+	padding-top: 10px;
+	background-color: white;
+	width:100%;
+	padding-bottom: 10px;
+}
+.topnav {
+	margin:auto;
+	overflow: hidden;
+	background-color: #333;
+	margin: 0px 170px;
+}
+/* .site{
+	margin:auto;
+} */
+.topnav a {
+	float: left;
+	color: #f2f2f2;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+	width: 150px
+}	
+
+.topnav a:hover {
+	background-color: #ddd;
+	color: black;
+}
+/* ------------------------------ */
+.noidung {
+	width: 100%;
+	height: 100vh;
+	margin-top: 20px;
+}
+.sign {
+	margin: auto;
+	background-color: #ddd;
+	width: 400px;
+	border-radius: 10px;
+	box-shadow: 0 0 10px #aaa;
+}
+.headcreate {
+	border-radius: 10px 10px 0 0;
+	width: 100%;
+	height: 230px;
+	background-image: url("mecung.jpg");
+	background-position: center;
+	background-size: cover;
+}
+.main {
+	margin: 20px 40px 40px 40px;
+	text-align: center;
+}
+.main b {
+	color: gray;
+}
+.main p {
+	display: none;
+	margin-top: 0px;
+	padding-left: 20px;
+	position: absolute;	
+}
+.main form input {
+	margin-bottom: 5px;
+	margin-top: 30px;
+	height: 40px;
+	width: 320px;
+	border-radius: 25px;
+	padding-left: 20px;
+	box-sizing: border-box;
+	color: #555;
+	box-shadow: 0 3px 3px #aaa;
+	font-size: 15px;
+	border: none;
+}
+.main form textarea {
+	margin-bottom: 5px;
+	margin-top: 30px;
+	height: 150px;
+	width: 320px;
+	border-radius: 25px;
+	padding-left: 20px;
+	box-sizing: border-box;
+	color: #555;
+	box-shadow: 0 3px 3px #aaa;
+	font-size: 15px;
+	border: none;
+}
+.main input[type=submit] {
+	width: 220px;
+	padding: 0;
+	font-size: 16px;
+	background-color: #fff;
+	margin-bottom: 20px;
+}
+.main form input:hover, form textarea:hover {
+	background-color: lightgray;
+}	
+
+/*------------solve---------------*/
+td{
+	width: 25px;
+	height: 25px;
+	font-size: 15px;
+	text-align: center;
+	color: gray;
+}
+.centermaze{
+	display: flex;
+}
+.maze {
+	margin: auto;
+}
+#solvebutton {
+	width: 90px;
+	padding: 5px;
+	margin-top: 20px;
+	border-radius: 15px;
+	color: black;
+	font-size: 20px;
+	border: none;
+	background-color: lightgray;
+}
+#solvebutton:hover {
+	color: white;
+	background-color: gray;
+}
+
+/*---------------uploadfile-------------*/
+.up {
+	display: flex;
+	margin: 50px;
+}
+.upload {
+	background-image: url("upload.jpg");
+	margin: auto;
+	height: 200px;
+	background-color: #ddd;
+	width: 400px;
+	border-radius: 10px;
+	box-shadow: 0 0 10px #aaa;
+	margin-top: 0;
+}
+.upload h1 {
+	padding-top: 15px;
+	text-align: center;
+	text-shadow: 3px 0 0 gray;
+	margin-bottom: 40px;
+}
+.upload input {
+	margin: 5px;
+	margin-left: 70px;
+	padding: 10px;
+}
+.upload input[type=submit] {
+	width: 220px;
+	padding: 0;
+	height: 30px;
+	font-size: 16px;
+	background-color: #fff;
+	margin-bottom: 10px;
+	border: none;
+	border-radius: 25px;
+	margin-left: 85px;
+}
+.upload form input:hover{
+	background-color: none;
+}	
+.upload form input[type=submit]:hover{
+	background-color: lightgray;
+}	
+/*-------------index--------------*/
+.index1 {
+	padding-top: 30px;
+}
+.index {
+	margin: auto;
+	background-color: #ddd;
+	width: 400px;
+	border-radius: 10px;
+	box-shadow: 0 0 10px #aaa;
+}
+.index h2 {
+	padding-top: 15px;
+	text-align: center;
+	margin-bottom: 30px;
+}
+.index td {
+	width: 150px;
+	text-align: center;
+	padding: 5px;
+	color: black;
+}
+.index table {
+	/* margin: 15px; */
+	margin: auto;
+	padding-bottom: 20px;
+}
+/*---------Click----*/
+#click {
+	overflow: hidden;
+	position: fixed; 
+	top: 600px; 
+	right: 90px;
+	border-radius: 50%;
+	border: none;
+	font-size: 25px;
+	padding: 10px;
+	background-color: white;
+	color: yellow;
+}
+#click:hover {
+	background-color: gray;
+	color: red;
+}
