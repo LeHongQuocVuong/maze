@@ -12,10 +12,7 @@
 //3 la diem ket thuc
 //GOAL : duong di cua me cung 
 //input : dau vao, dau ra , tuong
-const char* action[] = {
-	"START -->","UP -->","DOWN -->",
-	"LEFT -->","RIGHT -->"
-};
+
 //cau truc me cung 
 
 typedef struct State{
@@ -36,7 +33,7 @@ int goalcheck(State state){
 }
 void printState(FILE *fptr, State state){
 	int i,j;
-	//fprintf(fptr, "%d %d\n",state.x,state.y);
+	
 	for (i=0; i<state.n; i++){
 		for(j=0;j<state.m;j++){
 			fprintf(fptr,"%d ",state.a[i][j]);
@@ -48,7 +45,7 @@ int check( State state, int x, int y )	//kiem tra (x,y) co trong maze khong
 {
 	 if ( x < 0 ||  x >= state.n) return 0;
 	 if ( y < 0 ||  y >= state.m) return 0;
-//	if(a[x][y]<0 || a[x][y]>1) return 0;
+
 	 return 1;
 }
 
@@ -167,7 +164,7 @@ void sort_List(List* list){
 	int i,j;
 	for(i=0; i<list->size-1 ; i++)
 		for(j=i+1; j<list->size; j++)
-			if(list->elements[i]->h > list->elements[j]->h){
+			if(list->elements[i]->f > list->elements[j]->f){
 				Node* node = list->elements[j];
 				list->elements[j] = list->elements[i];
 				list->elements[i] = node;
@@ -204,7 +201,7 @@ Node* A_Star(FILE* output,State state){
 				newNode->g = node->g + 1;
 				newNode->h = heuristic(newstate);
 				newNode->f = newNode->g + newNode->h;
-				//Kiem tra trang thai moi sinh cos thuoc Open_A_Star, Close_A_Star khong
+				//Kiem tra trang thai moi sinh co thuoc Open_A_Star, Close_A_Star khong
 				int pos_Open, pos_Close;
 				Node* nodeFoundOpen= find_State(newstate, Open_A_Star, &pos_Open);
 				Node* nodeFoundClose= find_State(newstate, Close_A_Star, &pos_Close);
