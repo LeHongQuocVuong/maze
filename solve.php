@@ -53,9 +53,9 @@
 							
 						}
 						else{
-							//var_export($maze);
+							
 								// chay chuong trinh C.
-								exec("maze.exe", $out);//print_r($out);
+								exec("maze.exe", $out);
 								$output= fopen("output.txt","r");
 								if(!$output) {
 									echo 'Mo file khong thanh cong !';
@@ -99,20 +99,16 @@
 							echo "<button id=\"solvebutton\" onclick=\"myFunction()\">Giải</button>";
 						}
 						
-						?>
+						?>						
 						
-						<p id="demo"></p>
-						<script>
-						
+						<script>						
 						var index = 0;
 						var goalway = 0;
 						
 						function myFunction() {        				//  tạo hàm lập
-							setTimeout(function() {   				//  gọi hàm mỗi 200ms
-								document.getElementById("demo").innerHTML = wtgg[index];
-								
-										var id = wtgg[index];	   
-										document.getElementById(id).style = "background-color:LightSkyBlue";
+							setTimeout(function() {   				//  gọi hàm mỗi 50ms
+								var id = wtgg[index];	   
+								document.getElementById(id).style = "background-color:LightSkyBlue";
 								
 								index ++;
 								if (index < wtgg.length -1){           

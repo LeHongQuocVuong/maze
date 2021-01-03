@@ -31,17 +31,8 @@ int compareStates(State state1, State state2){
 int goalcheck(State state){
 	return state.a[state.x][state.y] == 3;
 }
-void printState(FILE *fptr, State state){
-	int i,j;
-	
-	for (i=0; i<state.n; i++){
-		for(j=0;j<state.m;j++){
-			fprintf(fptr,"%d ",state.a[i][j]);
-		}
-		fprintf(fptr,"\n");
-	}
-}
-int check( State state, int x, int y )	//kiem tra (x,y) co trong maze khong
+
+int check( State state, int x, int y )					//kiem tra (x,y) co trong maze khong
 {
 	 if ( x < 0 ||  x >= state.n) return 0;
 	 if ( y < 0 ||  y >= state.m) return 0;
@@ -83,7 +74,7 @@ int right(State state, State* result){
 	} 
 	return 0;
 }
-callOperators(State state, State* result,int opt){
+int callOperators(State state, State* result,int opt){
 	switch(opt){
 		case 1 : return up(state, result);
 		case 2 : return down(state, result);
@@ -159,7 +150,7 @@ Node* find_State (State state, List list,int* position){
 	}
 	return NULL;
 }
-// Sap xep theo h
+// Sap xep theo f
 void sort_List(List* list){
 	int i,j;
 	for(i=0; i<list->size-1 ; i++)
